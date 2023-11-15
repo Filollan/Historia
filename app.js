@@ -1,31 +1,57 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Obtiene el contenedor de campos de identificación
-    const camposIdentificacion = document.getElementById('campos-identificacion');
+const nombreInput = document.getElementById('Nombre');
+const documentoInput = document.getElementById('Documento');
+const edadInput = document.getElementById('Edad');
+const sexoInput = document.getElementById('Sexo');
+const ocupacionInput = document.getElementById('Ocupacion');
+// Y así con los demás
 
-    // Array con los nombres de los campos de identificación
-    const campos = [
-        'Nombre','Documento', 'Edad', 'Lugar de nacimiento','Fecha de nacimiento',
-        'Sexo', 'Raza', 'Estado Civil', 'Nivel de Estudio', 
-        'Ocupación', 'Religión', 'Procedencia', 'Domicilio',
-        'Teléfono', 'Grupo Sanguíneo', 'EPS', 'Tipo de Vinculación',
-        'Responsable o Acudiente', 'Parentesco del Responsable o Acudiente',
-        'Teléfono del Responsable o Acudiente'
-    ];
+// Función para obtener los datos del formulario
+function obtenerDatosForm() {
+  const datos = {
+    nombre: nombreInput.value, 
+    edad: edadInput.value,
+    // ...
+  }
 
+  return datos;
+}
 
-    // Agrega campos al formulario
-    campos.forEach(function (campo) {
-        const label = document.createElement('label');
-        label.setAttribute('for', campo.toLowerCase().replace(/ /g, '-'));
+// Simulación de base de datos
+const db = []; 
 
-        const input = document.createElement('input');
-        input.type = 'text';
-        input.id = campo.toLowerCase().replace(/ /g, '-');
-        input.name = campo.toLowerCase().replace(/ /g, '-');
+// Función para guardar
+function guardar() {
+  const datos = obtenerDatosForm();
+  
+  // Asignar ID
+  datos.id = Date.now(); 
+  
+  // Guardar en "DB"
+  db.push(datos);
+}
 
-        label.textContent = campo + ':';
+// Función para editar
+function editar(id) {
+  const datos = obtenerDatosForm();
+  
+  // Buscar índice del registro por ID
+  const index = db.findIndex(x => x.id === id);
 
-        camposIdentificacion.appendChild(label);
-        camposIdentificacion.appendChild(input);
-    });
-});
+  // Actualizar registro
+  db[index] = {...db[index], ...datos};
+}
+
+// Función para eliminar
+function eliminar(id) {
+
+  const index = db.findIndex(x => x.id === id);
+  db.splice(index, 1);
+
+}
+
+// Handler al hacer clic en botón guardar
+const botonGuardar = document.getElementById("btn-guardar");
+
+botonGuardar.onclick = () => {
+  guardar();
+}

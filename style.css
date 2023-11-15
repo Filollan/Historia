@@ -1,112 +1,83 @@
+:root {
+    --primary: #535f6d;
+    --secondary: #f3f3f3;
+/*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=264ed9&c2=9fd2a8&gt=c&gd=dtr
+*/
+background: rgba(38, 78, 217, 1.0);
+background: conic-gradient(from 45deg, rgba(38, 78, 217, 1.0), rgba(159, 210, 168, 1.0));
+}
 /* Estilos para el encabezado */
 header {
-    background-color: #f8f8f8;
-    color: #111111;
+    color: #630af3;
     text-align: center;
-}
-
-
-/* Estilos para el pie de página */
-footer {
-    background-color: #333;
-    color: #f80a0a;
-    text-align: center;
-}
-
-label, input, p {
-    display: block;
-    text-align: center;
-}
-
-/* Estilos para el contenedor principal */
-.body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 10vh;
-    margin: 0;
     
-}   
-
-/* Estilos para el encabezado (header) */
-.header {
-    text-align: center;
 }
+
+
+.body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
 
 /* Estilos para el formulario de datos de identificación */
 #formulario-datos-identificacion {
-    margin-top: 20px;
-    padding: 20px;
-    border: 1px solid #0ce44d;
-    border-radius: 5px;
-    background-color: #ffffff;
+    margin-top: 10px;
+    padding: 50px;
+    border: 1px solid #4d0ce4;
+    border-radius: 50px;
+    
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* Estilos para los campos de identificación */
-.label {
-    display: block;
-    margin: 200px 0;
+
+label {
+    width: 50%; /* Ancho del label */
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 input {
-    width: 100%;
-    padding: 3px;
-    margin: 10px 0;
-    border: 1px solid #db0808;
-    border-radius: 3px;
+    width: 50%; /* Ancho del input */
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #0c0b0b;
+    border-radius: 6px;
+    box-sizing: border-box;
 }
 
 button {
     display: block;
-    margin: 10px 0;
+    margin: 10px 35px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #ff2600;
     color: #fff;
     border: none;
     border-radius: 3px;
     cursor: pointer;
 }
 
-/* Estilos para el pie de página (footer) */
-footer {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #fcfafa;
-}
-
-.section-content {
-    display: flex;
-    align-items: center;
-}
-
-.left {
-    flex: 1;
-    margin: 0;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #f7f7f7;
-    
+#medico {
+    width: 40%; /* O el ancho que desees */
+    padding: 3px;
+    margin: 10px 0;
+   
+    border-radius: 3px;
+    order: 1;
     
 }
-.centrar {
-    text-align: center;
+#fecha {
+    width: 10%; /* O el ancho que desees */
+    padding: 3px;
+    margin: 10px 0;
+   
+    border-radius: 3px;
+    order: 1;
 }
-
-
-.right {
-    flex: 2; /* Puedes ajustar el valor flex para controlar el ancho del textarea */
-}
-
-textarea {
-    width: 100%;
-    margin-left: 10px;
-}
-
-
-
-
-
-

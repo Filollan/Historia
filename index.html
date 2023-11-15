@@ -14,83 +14,48 @@
 </head>
 
 <body>
+    
     <header>
-        <h3>HISTORIA CLINICA DE TERAPIA NEURAL (Historia de vida)</h3>
+        <h1>HISTORIA CLINICA DE TERAPIA NEURAL</h1>
     </header>
     <label for="fecha">Fecha</label>
     <input type="date" id="fecha" name="fecha">
 
     <label for="medico">Médico:</label>
     <input type="text" id="medico" name="medico">
-    < >
+    
         <section>
             <h4>1. Datos de Identificación</h4>
             <form id="formulario-datos-identificacion">
-                <div id="campos-identificacion">
+                <label for="medico">Nombre completo:</label>
+                <input type="text" id="Nombre" name="Nombre">
+                <label for="Nombre">Documento de identificación:</label>
+                <input type="text" id="Documento" name="Documento">
+                <label for="Edad">Edad:</label>
+                <input type="number" id="Edad" name="Edad">
+                <label for="Sexo">Sexo:</label>
+                <input type="texto" id="Sexo" name="Sexo">
+                <label for="Ocupacion">Ocupacion:</label>
+                <input type="text" id="Ocupacion" name="Ocupacion">
+                <label for="Procedencia">Procedencia:</label>
+                <input type="text" id="Procedencia" name="Procedencia">
+                <label for="Telefono">Telefono o numero de celular:</label>
+                <input type="tel" id="Telefono" name="Telefono">
+                <label for="sanguineo">Grupo sanguineo:</label>
+                <input type="text" id="sanguineo" name="sanguineo">
+                <label for="EPS">EPS:</label>
+                <input type="text" id="EPS" name="EPS">
 
-                    <!-- Los campos de identificación se agregarán aquí dinámicamente desde JavaScript -->
-                </div>
-                <button type="submit">Guardar Datos</button>
+
+
+                <button type="button" onclick="Guardar()">Guardar </button>
+                <button type="button" onclick="editar()">Editar</button>
+                <button type="button" onclick="eliminar()">Eliminar</button>
             </form>
         </section>
-        <section>
-            <h4>2. Motivo de consulta y enfermedad actual</h4>
-            <textarea id="motivo-consulta" name="motivo-consulta" rows="20" cols="130"></textarea>
-        </section>
-
-        <section>
-            <h4>3. Revision por sistema (Relacion como emergencias)</h4>
-            <div class="section-content">
-                <aside class="left">
-                    
-                    <p class="centrar"><b>Sintomas generales:</b>
-                        fiebre, cambios de peso, malestar general, astenia, adinamia fatiga, alt de animo, sudoracion
-                        nocturna,
-                        insomniol.
-                        <br>
-                        <b>Piel y faneras:</b>
-                        prurito, rash, cambios de coloracion, lesiones primarias y secundarias, alteraciones en uñas y
-                        cabellos,
-                        edemas, cicatrices, fotosensibilidad.
-                        <br>
-                        <b>Aparato digestivo:</b>
-                        halitosis, disfagia, odinofagia, regurgitacion, glosodinia, sialorrea, xerostomia, transt.
-                        masticacion,
-                        dientes, sangrado de encias, pirosis, nausea, vomito, dolor, diarrea, hematemesis, meteorismo,
-                        flatulencias, melena, constipacion, rectorragia, tenesmo, ictericia, coluria, acolia.
-                        <br>
-                        <b>Aparato cardiovascular:</b>
-                        Disnea, ortopnea, dolor precordial, cianosis, edema, palpitaciones, acufenos, fosfenos, sincope,
-                        lipotimia, cefalea, claudicacion.
-                        <b>Aparato respitatorio;</b>
-                        Tos, disnea dolor toracico, hemoptisis, cianosis, vomica, alteraciones de la voz.
-                        <br>
-                        <b>Aparato urinario:</b>
-                        Alteraciones de la miccion puliuria, anuria, polaquiuria, oliguria, nicturia, disuria, tenesmo
-                        vesical, urgencia, alt. del chorro, enuresis, incontinencia, caracteristicas de la orina, dolor lumbar.
-                        <br>
-                        <b>Sistema osteomuscular:</b>
-                        artralgias, mialgias, edema, deformidad.
-                        <br>
-                        <b>Sistema nervioso: </b>
-                        oefalea, sincope, convulciones, coordinacion, deficit transitorio, vertigo, confusion, vigilia,
-                         sueño, paralisis, paresia, pareslesia, marcha, disestesia, equilibrio, sensibilidad, hipoestesia, hiperalgesia.
-                        <br>
-                        <b>Sistema sensorial: </b>
-                        agudeza visual, diplopia, eritema, fosfenos, dolor ocular, fotofobia, secrecion, xeroftalmia,
-                         amourosis, otalgia, otorrea y ctorragia, tinntus, hipoacusia, epistaxis, secrecion, disgeusia, ronquera.
-                         <br>
-                        <b>Psicosomatico: </b>
-                        Personalidad, obsecion, ansiedad, depresion, afectividad, emotividad, amnesia, voluntad, pensamiento, atension, 
-                        ideacion suicida, delirios.
-                    </p>
-                </aside>
-                <div class="right">
-                    <textarea id="cuadro-texto" name="cuadro-texto" rows="30" cols="50"></textarea>
-                </div>
-            </div>
-        </section>
+        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,600 C 0,600 0,200 0,200 C 73.65550239234452,193.9043062200957 147.31100478468903,187.80861244019138 237,175 C 326.68899521531097,162.19138755980862 432.4114832535885,142.66985645933013 529,137 C 625.5885167464115,131.33014354066987 713.043062200957,139.51196172248802 816,152 C 918.956937799043,164.48803827751198 1037.4162679425838,181.28229665071768 1144,190 C 1250.5837320574162,198.71770334928232 1345.2918660287082,199.35885167464116 1440,200 C 1440,200 1440,600 1440,600 Z" stroke="none" stroke-width="0" fill="#0693e3" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-0"></path><path d="M 0,600 C 0,600 0,400 0,400 C 113.80861244019138,428.7464114832536 227.61722488038276,457.49282296650716 317,458 C 406.38277511961724,458.50717703349284 471.3397129186603,430.7751196172249 549,414 C 626.6602870813397,397.2248803827751 717.0239234449759,391.4066985645932 831,409 C 944.9760765550241,426.5933014354068 1082.5645933014355,467.59808612440196 1188,470 C 1293.4354066985645,472.40191387559804 1366.7177033492821,436.200956937799 1440,400 C 1440,400 1440,600 1440,600 Z" stroke="none" stroke-width="0" fill="#0693e3" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-1"></path></svg>
     </main>
+    
   
 </body>
 
